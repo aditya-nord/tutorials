@@ -160,7 +160,7 @@ This JSON can then be pasted on a third-party app's interface that supports gene
 
 **Function**: Endpoint to revoke a Verifiable Credential 
 
-**How it Works**: The Issuer DID (The identifier string retrieved from calling the `Create Identity` endpoint) and `nonce` of the VC to be revoked (Revocation Nonce) are passed as a path variable in the request URL. 
+**How it Works**: The Issuer DID (The identifier string retrieved from calling the `Create Identity` endpoint) and `nonce` of the VC to be revoked (Revocation Nonce) are passed as a path variable in the request URL. The Revocation Nonce can be fetched by calling the [Get Claims](https://0xpolygonid.github.io/tutorials/issuer-node/issuer-node-api/claim/apis/#get-claims) API and is nested under the `credentialStatus` property as `revocationNonce`.
 
 The server responds by showing the Revocation Status of the credential.
 
